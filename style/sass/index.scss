@@ -15,79 +15,115 @@
 
 h1 {
     font-family: title;
-    color: white;
     font-size: 32px;
     margin: 0px;
 }
 
+h2 {
+    padding-left: 50px;
+    margin-bottom: 0px;
+    font-size: 24px;
+    margin-top: 0px;
+    font-family: title;
+}
+
 p {
     font-family: text;
-    color: white;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
     font-size: 20px;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-div {
-    #nav {
-        height: 100%;
-        width: 0px;
-        background-color: black;
-        opacity: 0.5;
-        overflow-x: hidden;
-        float: left;
-        z-index: -1;
-        position: fixed;
-        
-        div {
-            .nav-head {
-                width: 160px;
-                height: 1px;
-                margin-top: 75px;
-                margin-bottom: 20px;
-                background-color: white;
-            }
+#nav {
+    height: 100%;
+    width: 0px;
+    background-color: black;
+    opacity: 0.5;
+    overflow-x: hidden;
+    float: left;
+    z-index: -1;
+    position: fixed;
 
-            .nav {
-                width: 160px;
-                height: 1px;
-                margin-top: 20px;
-                background-color: white;
-            }
+    .nav-head {
+        width: 160px;
+        height: 1px;
+        margin-top: 75px;
+        margin-bottom: 20px;
+        background-color: white;
+    }
 
-            .nav-imp {
-                font-family: title;
-                color: white;
-                margin-top: 20px;
-                margin-bottom: 0px;
-                font-size: 20px;
-            }
-        }
+    .nav {
+        width: 160px;
+        height: 1px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: white;
+    }
 
-        a {
-            .nav-link-imp {
-                font-family: title;
-                color: white;
-                margin-top: 20px;
-                font-size: 20px;
-                text-decoration: none;
-            }
-        }
+    .nav-link {
+        font-family: title;
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        padding: 0px;
+        text-decoration: none;
+    }
+
+    .nav-link-imp {
+        font-family: title;
+        color: #D4AF37;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 0px;
+    }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#header {
+    background-color: white;
+    max-width: 900px;
+    min-width: 400px;
+    margin: auto;
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        padding: 20px 50px 20px 50px;
     }
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 #main {
-    height: 100%;
-    width: 100%;
+    height: calc(100% - 200px);
+    width: calc(100% - 164px);
     z-index: 2;
-    position: fixed;
+    position: absolute;
     box-shadow: -2px 0px 12px 1px rgba(0,0,0,0.6);
     padding-left: 82px;
     padding-right: 82px;
+    padding-top: 200px;
+    background-image: url("./img/index.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    .content {
+        margin: auto;
+        margin-top: 16px;
+        max-width: 900px;
+        min-width: 400px;
+        background-color: white;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -103,7 +139,7 @@ div {
 body {
     z-index: 1;
     margin: 0px;
-    background-image: linear-gradient(#323815, rgb(10, 5, 4) 85%);
+    background-image: linear-gradient(#3a3a3a, rgb(10, 5, 4) 85%);
     background-repeat: no-repeat;
 }
 
@@ -112,4 +148,5 @@ html {
     height: 100%;
     width: 100%;
     overflow-y: scroll;
+    background-color: black;
 }

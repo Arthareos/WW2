@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cauze</title>
+        <link rel="stylesheet" type="text/css" href="./style/backup.css">
+        <link rel="icon" href="./style/img/page-logo.png">
+    </head>
+    <body>
+        <a id="icon" href="#" onclick="openNav()"><img src="./style/img/logo.png" height="32" width="32"></a>
+        <div id="nav">
+            <div class="nav-head"></div>
+            <a href="index.html" class="nav-link">Home</a>
+            <div class="nav"></div>
+            <a href="cauze.html" class="nav-link-imp">Cauze</a>
+            <a href="participanti.html" class="nav-link"><p class="nav-link">Participanți</p></a>
+            <a href="cronologie.html" class="nav-link"><p class="nav-link">Cronologie</p></a>
+            <a href="tehnologii.html" class="nav-link"><p class="nav-link">Noile Tehnologii</p></a>
+            <a href="genocid.html" class="nav-link"><p class="nav-link">Genocidul</p></a>
+            <a href="urmari.html" class="nav-link"><p class="nav-link">Urmări</p></a>
+        </div>
+        <div id="main">
+            <div id="header">
+                <h1>Cauzele</h1>
+            </div>
+            <div class="content">
+                <h1>Cauzele</h1>
+                <h2>Introducere</h2>
+                <p>Cauzele celui de-al Doilea Război Mondial sunt în general considerate invazia germano-rusă a Poloniei și atacul 
+                    japonez asupra Chinei, Statelor Unite ale Americii și asupra coloniilor Regatului Unit și Olandei.</p>
+                <br>                        
+                <p>Printre cauzele războiului mondial s-au numărat creșterea naționalismului, a militarismului și existența multor
+                    probleme teritoriale rămase nerezolvate după încheierea Primului Război Mondial. Mișcările fasciste au apărut
+                    și s-au dezvoltat în Italia și Germania în timpul perioadei de instabilitate economică globală din timpul 
+                    deceniilor al treilea și al celui de-al patrulea ai Marii Crize Economice). În Germania, resentimentele 
+                    apărute în urma înfrângerii din primul război mondial și a semnării Păcii de la Versailles, (în mod special
+                    a Articolului 231, așa-numita "Clauză de vinovăție"), credința în teoria loviturii de cuțit aplicate pe la 
+                    spate și declanșarea Marii Crize Economice au fost elementele care au propulasat la putere Partidul Nazist 
+                    condus de Adolf Hitler. În acest timp, Tratatul de pace a început să nu mai fie aplicat cu foarte multă 
+                    rigoare, din dorința de a evita izbucnirea unui nou război. Eșecul politicii franco-britanice de împăciuire 
+                    cu Hitler, (politică care urmărea evitarea unui nou război, dar care l-a încurajat pe dictatorul german să 
+                    devină mai îndrăzneț și i-a permis să reînarmeze țara), s-a aflat în strânsă legătură cu semnarea Pactului 
+                    Molotov-Ribbentrop, (care a eliberat Germania de orice temere a vreunei reacții din partea URSS-ului în 
+                    cazul invadării Poloniei). Liga Națiunilor, în ciuda eforturilor diplomatice făcute pentru evitarea 
+                    războiului, se baza pe Marile Puteri pentru impunerea rezoluțiilor sale și, în lipsa voinței politice a 
+                    acestora, nu a putut face nimic concret. </p>
+            </div>
+        </div>
+        <script>
+            var Action = 0;
+            var x = 0;
+            var nav = document.getElementById("nav");
+            var counter = 0;
+            var LittleCount = 0;
+            var BigCount = 0;
+            var aux = 0;
+            function openNav() {
+                if (Action == 0)
+                {
+                    if (x == 0) {
+                        Action = 1;
+                        var one = setInterval(OpenFrame, 1);
+                        function OpenFrame() {
+                            if (nav.style.width == "160px") {
+                                clearInterval(one);
+                                x = 1;
+                                Action = 0;
+                            }
+                            else {
+                                counter++;
+                                aux++;
+                                if (aux == 8) {
+                                    LittleCount++;
+                                    nav.style.paddingLeft = LittleCount + "px";
+                                    nav.style.paddingRight = LittleCount + "px";
+                                    aux = 0;
+                                }
+                                nav.style.width = counter + "px";
+                                BigCount = counter + LittleCount*2;
+                                document.getElementById("main").style.marginLeft = BigCount + "px";
+                            }
+                        }
+                    }
+                    else {
+                        Action = 1;
+                        zero = setInterval(CloseFrame, 1);
+                        counter = 160;
+                        LittleCount = 20;
+                        aux = 0;
+                        function CloseFrame() {
+                            if (nav.style.width == "0px") {
+                                clearInterval(zero);
+                                x = 0;
+                                Action = 0;
+                            }
+                            else {
+                                counter--;
+                                aux++;
+                                if (aux == 8) {
+                                    LittleCount--;
+                                    nav.style.paddingLeft = LittleCount + "px";
+                                    nav.style.paddingRight = LittleCount + "px";
+                                    aux = 0;
+                                }
+                                nav.style.width = counter + "px";
+                                BigCount = counter + LittleCount*2;
+                                document.getElementById("main").style.marginLeft = BigCount + "px";
+                            }
+                        }
+                    }
+                }
+            }
+        </script>    
+    </body>
+</html>

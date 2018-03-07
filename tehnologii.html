@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cronologie</title>
+        <link rel="stylesheet" type="text/css" href="./style/tehnologii.css">
+        <link rel="icon" href="./style/img/page-logo.png">
+    </head>
+    <body>
+        <a id="icon" href="#" onclick="openNav()"><img src="./style/img/logo.png" height="32" width="32"></a>
+        <div id="nav">
+            <div class="nav-head"></div>
+            <a href="index.html" class="nav-link">Home</a>
+            <div class="nav"></div>
+            <a href="cauze.html" class="nav-link"><p class="nav-link">Cauze</p></a>
+            <a href="participanti.html" class="nav-link"><p class="nav-link">Participanți</p></a>
+            <a href="cronologie.html" class="nav-link"><p class="nav-link">Cronologie</p></a>
+            <a href="tehnologii.html" class="nav-link-imp">Noile Tehnologii</a>
+            <a href="genocid.html" class="nav-link"><p class="nav-link">Genocidul</p></a>
+            <a href="urmari.html" class="nav-link"><p class="nav-link">Urmări</p></a>
+        </div>
+        <div id="main">
+            <div class="content">
+                <h1>Tehnologii</h1>
+                <p>Tehnologia a jucat un rol crucial în rezultatului celui de-al Doilea Război Mondial. O mare 
+                    parte din aceste tehnologii au fost dezvoltate în anii interbelici: 1920 - 1930, unele s-au 
+                    dezvoltat ca urmare a lecțiilor valoroase învățate în timpul războiului, iar altele spre 
+                    sfârșitul războiului.</p>
+                <br>
+                <h2>Proiectul Manhattan</h2>
+                <p>Proiectul Manhattan a fost proiectul de dezvoltare a primei arme nucleare 
+                    (cunoscută popular ca bomba atomică) în timpul Celui de-Al Doilea Război 
+                    Mondial de către Statele Unite ale Americii, Regatul Unit și Canada. Ceea 
+                    ce a fost denumit oficial Districtul Ingineresc Manhattan, se referă anume 
+                    la perioada 1941–1946, când proiectul s-a aflat sub controlul Corpului de 
+                    Geniu al Armatei SUA, sub adminstrația Generalului major Leslie R. Groves. 
+                    Cercetarea științifică a fost condusă de fizicianul american J. Robert Oppenheimer.</p>
+                <br>
+                <p>Proiectul a avut succes în dezvoltarea și detonarea a trei arme nucleare în 1945: 
+                    o detonare de test a unei bombe cu implozie cu plutoniu pe 16 iulie (testul Trinity) 
+                    lângă Alamogordo, statul New Mexico, o bombă cu uraniu îmbogățit denumită "Little Boy" 
+                    pe 6 august deasupra orașului Hiroshima, Japonia, și o a doua bombă cu plutoniu, denumită 
+                    "Fat Man" pe 9 august deasupra orașului Nagasaki, Japonia.</p>
+            </div>
+        </div>
+        <script>
+            var Action = 0;
+            var x = 0;
+            var nav = document.getElementById("nav");
+            var counter = 0;
+            var LittleCount = 0;
+            var BigCount = 0;
+            var aux = 0;
+            function openNav() {
+                if (Action == 0)
+                {
+                    if (x == 0) {
+                        Action = 1;
+                        var one = setInterval(OpenFrame, 1);
+                        function OpenFrame() {
+                            if (nav.style.width == "160px") {
+                                clearInterval(one);
+                                x = 1;
+                                Action = 0;
+                            }
+                            else {
+                                counter++;
+                                aux++;
+                                if (aux == 8) {
+                                    LittleCount++;
+                                    nav.style.paddingLeft = LittleCount + "px";
+                                    nav.style.paddingRight = LittleCount + "px";
+                                    aux = 0;
+                                }
+                                nav.style.width = counter + "px";
+                                BigCount = counter + LittleCount*2;
+                                document.getElementById("main").style.marginLeft = BigCount + "px";
+                            }
+                        }
+                    }
+                    else {
+                        Action = 1;
+                        zero = setInterval(CloseFrame, 1);
+                        counter = 160;
+                        LittleCount = 20;
+                        aux = 0;
+                        function CloseFrame() {
+                            if (nav.style.width == "0px") {
+                                clearInterval(zero);
+                                x = 0;
+                                Action = 0;
+                            }
+                            else {
+                                counter--;
+                                aux++;
+                                if (aux == 8) {
+                                    LittleCount--;
+                                    nav.style.paddingLeft = LittleCount + "px";
+                                    nav.style.paddingRight = LittleCount + "px";
+                                    aux = 0;
+                                }
+                                nav.style.width = counter + "px";
+                                BigCount = counter + LittleCount*2;
+                                document.getElementById("main").style.marginLeft = BigCount + "px";
+                            }
+                        }
+                    }
+                }
+            }
+        </script>    
+    </body>
+</html>

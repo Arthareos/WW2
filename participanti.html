@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Participanti</title>
+        <link rel="stylesheet" type="text/css" href="./style/participanti.css">
+        <link rel="icon" href="./style/img/page-logo.png">
+    </head>
+    <body>
+        <a id="icon" href="#" onclick="openNav()"><img src="./style/img/logo.png" height="32" width="32"></a>
+        <div id="nav">
+            <div class="nav-head"></div>
+            <a href="index.html" class="nav-link">Home</a>
+            <div class="nav"></div>
+            <a href="cauze.html" class="nav-link-imp"><p class="nav-link">Cauze</p></a>
+            <a href="participanti.html" class="nav-link-imp">Participanți</a>
+            <a href="cronologie.html" class="nav-link"><p class="nav-link">Cronologie</p></a>
+            <a href="tehnologii.html" class="nav-link"><p class="nav-link">Noile Tehnologii</p></a>
+            <a href="genocid.html" class="nav-link"><p class="nav-link">Genocidul</p></a>
+            <a href="urmari.html" class="nav-link"><p class="nav-link">Urmări</p></a>
+        </div>
+        <div id="main">
+            <div class="content">
+                <h1>Participanți</h1>
+                <p>Al doilea război mondial a implicat în principal două mari alianțe militare.</p>
+                <br>
+                <h2>Aliații</h2>
+                <p>Aliații originali, legați de angajamentele lor pentru garantarea securității Poloniei, 
+                    erau în principal Franța și Regatul Unit. Căderea Franței a rămas singura țară importantă a 
+                    Aliaților. Restul țarilor erau în principal țările Commonwealthului și forțele comandate de 
+                    diferitele guverne în exil.</p>
+                <p>După atacul japonez împotriva bazei navale americane de la Pearl Harbor din 1941, Statele Unite 
+                    au intrat în mod oficial în război, implicându-se pe toate teatrele majore de război, din Europa 
+                    și Asia.</p>
+                <br>
+                <h2>Axa</h2>
+                <p>Această înțelegere, care nu a fost la început o alianță militaro-politică oficială, a fost 
+                    fondată pe conceptul Axei Roma-Berlin (Pactul de Oțel). Mai târziu, Axa s-a transformat în 
+                    Pactul Tripartit, prin adeziunea Japoniei. Fiecare dintre puterile importante ale Axei 
+                    Roma-Berlin-Tokio au pornit la război din proprie inițiativă: Germania în 1939, Italia în 1940, 
+                    iar Japonia în 1937 împotriva Chinei și în 1941 împotriva SUA.</p>
+            </div>
+        </div>
+        <script>
+            var Action = 0;
+            var x = 0;
+            var nav = document.getElementById("nav");
+            var counter = 0;
+            var LittleCount = 0;
+            var BigCount = 0;
+            var aux = 0;
+            function openNav() {
+                if (Action == 0)
+                {
+                    if (x == 0) {
+                        Action = 1;
+                        var one = setInterval(OpenFrame, 1);
+                        function OpenFrame() {
+                            if (nav.style.width == "160px") {
+                                clearInterval(one);
+                                x = 1;
+                                Action = 0;
+                            }
+                            else {
+                                counter++;
+                                aux++;
+                                if (aux == 8) {
+                                    LittleCount++;
+                                    nav.style.paddingLeft = LittleCount + "px";
+                                    nav.style.paddingRight = LittleCount + "px";
+                                    aux = 0;
+                                }
+                                nav.style.width = counter + "px";
+                                BigCount = counter + LittleCount*2;
+                                document.getElementById("main").style.marginLeft = BigCount + "px";
+                            }
+                        }
+                    }
+                    else {
+                        Action = 1;
+                        zero = setInterval(CloseFrame, 1);
+                        counter = 160;
+                        LittleCount = 20;
+                        aux = 0;
+                        function CloseFrame() {
+                            if (nav.style.width == "0px") {
+                                clearInterval(zero);
+                                x = 0;
+                                Action = 0;
+                            }
+                            else {
+                                counter--;
+                                aux++;
+                                if (aux == 8) {
+                                    LittleCount--;
+                                    nav.style.paddingLeft = LittleCount + "px";
+                                    nav.style.paddingRight = LittleCount + "px";
+                                    aux = 0;
+                                }
+                                nav.style.width = counter + "px";
+                                BigCount = counter + LittleCount*2;
+                                document.getElementById("main").style.marginLeft = BigCount + "px";
+                            }
+                        }
+                    }
+                }
+            }
+        </script>    
+    </body>
+</html>
