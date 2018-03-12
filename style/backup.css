@@ -13,12 +13,14 @@
   src: url("./fonts/subtext.otf");
 }
 
+/* line 16, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 h1 {
   font-family: title;
   font-size: 32px;
   margin: 0px;
 }
 
+/* line 22, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 h2 {
   padding-left: 50px;
   margin-bottom: 0px;
@@ -27,6 +29,7 @@ h2 {
   font-family: title;
 }
 
+/* line 30, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 p {
   font-family: text;
   margin-top: 0px;
@@ -37,6 +40,7 @@ p {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* line 41, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 #nav {
   height: 100%;
   width: 0px;
@@ -48,6 +52,7 @@ p {
   position: fixed;
 }
 
+/* line 51, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 #nav .nav-head {
   width: 160px;
   height: 1px;
@@ -56,6 +61,7 @@ p {
   background-color: white;
 }
 
+/* line 59, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 #nav .nav {
   width: 160px;
   height: 1px;
@@ -64,6 +70,7 @@ p {
   background-color: white;
 }
 
+/* line 67, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 #nav .nav-link {
   font-family: title;
   color: white;
@@ -74,6 +81,7 @@ p {
   text-decoration: none;
 }
 
+/* line 77, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 #nav .nav-link-imp {
   font-family: title;
   color: #D4AF37;
@@ -85,6 +93,7 @@ p {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* line 90, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 #header {
   background-color: white;
   max-width: 900px;
@@ -92,6 +101,7 @@ p {
   margin: auto;
 }
 
+/* line 95, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 #header h1 {
   text-align: center;
   font-size: 50px;
@@ -99,6 +109,7 @@ p {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* line 104, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 #main {
   width: calc(100% - 164px);
   z-index: 2;
@@ -113,6 +124,7 @@ p {
   background-attachment: fixed;
 }
 
+/* line 117, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 #main .content {
   margin: auto;
   margin-top: 16px;
@@ -123,6 +135,7 @@ p {
   padding-top: 50px;
 }
 
+/* line 125, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 #main .content h1 {
   font-family: title;
   margin: 0px;
@@ -130,6 +143,7 @@ p {
   padding: 16px 50px 16px 50px;
 }
 
+/* line 131, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 #main .content h2 {
   padding-left: 50px;
   margin-bottom: 0px;
@@ -139,6 +153,7 @@ p {
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* line 143, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 #icon {
   margin-top: 21.5px;
   margin-left: 25px;
@@ -147,6 +162,7 @@ p {
   position: fixed;
 }
 
+/* line 151, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 body {
   z-index: 1;
   margin: 0px;
@@ -154,6 +170,7 @@ body {
   background-repeat: no-repeat;
 }
 
+/* line 158, C:/Dev/Atestate/Cali/style/sass/backup.scss */
 html {
   z-index: 0;
   height: 100%;
@@ -161,3 +178,5 @@ html {
   overflow-y: scroll;
   background-color: black;
 }
+
+/*# sourceMappingURL=../backup.map */
