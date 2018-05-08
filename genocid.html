@@ -41,35 +41,28 @@
         </div>
         <script>
             var Action = 0;
-            var x = 0;
+            var Open = 0;
             var nav = document.getElementById("nav");
             var counter = 0;
-            var LittleCount = 0;
             var BigCount = 0;
-            var aux = 0;
             function openNav() {
                 if (Action == 0)
                 {
-                    if (x == 0) {
+                    if (Open == 0) {
                         Action = 1;
                         var one = setInterval(OpenFrame, 1);
                         function OpenFrame() {
                             if (nav.style.width == "160px") {
                                 clearInterval(one);
-                                x = 1;
+                                Open = 1;
                                 Action = 0;
                             }
                             else {
                                 counter++;
-                                aux++;
-                                if (aux == 8) {
-                                    LittleCount++;
-                                    nav.style.paddingLeft = LittleCount + "px";
-                                    nav.style.paddingRight = LittleCount + "px";
-                                    aux = 0;
-                                }
                                 nav.style.width = counter + "px";
-                                BigCount = counter + LittleCount*2;
+                                nav.style.paddingLeft = counter/8 + "px";
+                                nav.style.paddingRight = counter/8 + "px";
+                                BigCount = counter + ((counter/8)*2);
                                 document.getElementById("main").style.marginLeft = BigCount + "px";
                             }
                         }
@@ -78,25 +71,18 @@
                         Action = 1;
                         zero = setInterval(CloseFrame, 1);
                         counter = 160;
-                        LittleCount = 20;
-                        aux = 0;
                         function CloseFrame() {
                             if (nav.style.width == "0px") {
                                 clearInterval(zero);
-                                x = 0;
+                                Open = 0;
                                 Action = 0;
                             }
                             else {
                                 counter--;
-                                aux++;
-                                if (aux == 8) {
-                                    LittleCount--;
-                                    nav.style.paddingLeft = LittleCount + "px";
-                                    nav.style.paddingRight = LittleCount + "px";
-                                    aux = 0;
-                                }
                                 nav.style.width = counter + "px";
-                                BigCount = counter + LittleCount*2;
+                                nav.style.paddingLeft = counter/8 + "px";
+                                nav.style.paddingRight = counter/8 + "px";
+                                BigCount = counter + ((counter/8)*2);
                                 document.getElementById("main").style.marginLeft = BigCount + "px";
                             }
                         }
